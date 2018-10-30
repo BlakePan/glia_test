@@ -5,12 +5,9 @@ import tool
 
 
 def predict_max(starting, cnt2, cnt3):
-  sent_num = 0
   list_of_words = []
-  while sent_num < 15:
-    prob = prob3(starting, cnt2=cnt2, cnt3=cnt3)
-    list_of_words
-    sent_num += 1
+  prob = prob3(starting, cnt2=cnt2, cnt3=cnt3)
+
 
   return list_of_words
 

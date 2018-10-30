@@ -1,6 +1,3 @@
-from nltk.tokenize import RegexpTokenizer as tokener
-import nltk
-
 import tool
 
 
