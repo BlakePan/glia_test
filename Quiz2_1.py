@@ -12,8 +12,8 @@ def ngram_probs(filename='./raw_sentences.txt'):
     bicount = 0
     tricount = 0
 
-    for i, line in enumerate(lines):
-      print(i, end='\r')
+    for ii, line in enumerate(lines):
+      print(ii, end='\r')
       line = line.lower()
       line = line.split(' ')
 

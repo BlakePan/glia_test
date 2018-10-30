@@ -7,7 +7,7 @@ from Quiz2_1 import ngram_probs
 def prob3(bigram, cnt2, cnt3):
   p2 = np.log10(cnt2[bigram])
   prob = {}
-  for key in cnt3:
+  for key in sorted(cnt3):
     p3 = np.log10(cnt3[key])
     for i in key:
       if i not in bigram:
