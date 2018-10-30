@@ -1,0 +1,48 @@
+1. When will we use F1-score instead of precision(accuracy)?
+Ans:
+當資料過度偏向某個類別時
+用accuracy難判斷真正的預測力
+例如資料label幾乎都是positive
+model只要一直猜positive 正確率就很高
+但現實狀況跟訓練資料分布如果差距很大 performance就會差了
+因此accuracy不一定能代表model真正能力
+
+2. Why don’t we use binary classification function as the activation function in neural networks?
+Ans:
+不是可微分的函式，無法算梯度做BP
+
+3. What is the bias and variance of a machine learning algorithm?
+Ans:
+Bias會造成Underfitting，因為training參數過少，難逼近target function
+Variance會造成Overfitting，反而因為training參數過多導致過度符合training data的資料特性，在test表現通常不好
+
+4. When training a single tree in random forest, we don’t prune the tree, why?
+Ans:
+random forest類型的model目的是集成多個小分類器
+當成一個大分類器來使用
+即使當下這個tree他是overfitting的
+但也表示他對某單一feature看得很透徹
+結合眾多小分類器後去投票
+就像是團體中每個人都有各自專長
+最後集合大家意見做predict
+所以不需要針對tree去prune
+
+5. What is one-hot encoding?
+Ans:
+將目標編碼只有0/1的向量
+向量長度取決於編碼對象數量
+只有一個element為1 其他都為0
+
+例如
+對'a', 'b', 'c'編碼
+‘a’ -> (0, 0, 1)
+‘b’ -> (0, 1, 0)
+‘c’ -> (1, 0, 0)
+
+6. How to prevent overfitting in neural networks? (write down anything you know)
+Ans:
+drop out
+regularization
+cross-validation
+early stop
+feature selection/dimension reduction
